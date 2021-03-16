@@ -15,7 +15,7 @@ def render_main():
             listOfStates.append(county["State"])
     options = ""
     for state in listOfStates
-        options = options + ("<option value=\"" + s + "\">" + s + "</option>")
+        options = options + ("<option value=\"" + state + "\">" + state + "</option>")
         return options
   
   
