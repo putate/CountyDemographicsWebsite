@@ -17,7 +17,7 @@ counties = json.load(demographics_data)
     options = ""
     for state in listOfStates
         options = options + ("<option value=\"" + state + "\">" + state + "</option>")
-        return options
+    return options
   
   
     
