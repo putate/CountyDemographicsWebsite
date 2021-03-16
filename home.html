@@ -7,9 +7,9 @@
 <p>The select element is used to create a drop-down list.</p>
 
 <form action="/action_page.php">
-  <label for="cars">Choose a car:</label>
-  mydict = {'volvo': 'saab', 'opel': 'audi'}
-  <select name="cars">
+  <label for="states">Choose A State:</label>
+  mydict = {'AL': 'CA', 'AR': 'AK', 'As': 'AR', 'AR':}
+  <select name="states">
     {% for key, value in mydict.items() %}
         <option value="{{key}}" 
         {% if (key == target) %} selected="selected" { %endif %}
