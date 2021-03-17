@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Password Generator</title>
-	<link href="style.css" rel="stylesheet" type="text/css"/>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="myscript.js"></script>
-  </head>
-  <body>
-    <h1>Password Generator</h1>
-	<p>Enter your data and you will recieve a custom password</p>
-	<button type="button" id="Q1B">What is happening with my data?</button>
-	<div id="A1D">
-	<p>Your data will be used to create a randomly generated customized password</p>
-	<div>
-    <form action='/response'>
-      <label for="birthday">Birthday:</label>
-      <input type="date" id="birthday" name="birthday"><br>
-      What is your favorite color?<br>
-      <input type="text" name="color"><br>
-	   What is your favorite number?<br>
-      <input type="text" name="number"><br>
-	   What is the name of your best friend or pet?<br>
-      <input type="text" name="friend">
-      <br><br>
-      <input type="submit">
-      <input type="reset">
-    </form>
+<body>
 
-  </body>
+<h1>The select element</h1>
+
+<p>The select element is used to create a drop-down list.</p>
+
+<form action="/action_page.php">
+  <label for="states">Choose A State:</label>
+  mydict = {'AL': 'CA', 'AR': 'AK', 'As': 'AR', 'AR':}
+  <select name="states">
+    {% for key, value in mydict.items() %}
+        <option value="{{key}}" 
+        {% if (key == target) %} selected="selected" { %endif %}
+        >
+        {{value}}
+        </option>
+    {% endfor %}
+</select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
 </html>
