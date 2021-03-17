@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
-def get_state_options
+def get_state_options():
 counties = json.load(demographics_data)
     listOfStates = []
     for county in counties
@@ -12,7 +12,7 @@ counties = json.load(demographics_data)
             listOfStates.append(county["State"])
     options = ""
     for state in listOfStates
-        options = options + ("<option value=\"" + state + "\">" + state + "</option>")
+        options = options + Markup("<option value=\"" + state + "\">" + state + "</option>")
     return options
 
 @app.route("/")
